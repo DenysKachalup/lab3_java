@@ -10,7 +10,7 @@ import java.util.List;
 public class Person implements Closeable {
     String name;
 
-    public Person(String name) {
+    public Person(final String name) {
         this.name = name;
         validate();
     }
@@ -19,7 +19,7 @@ public class Person implements Closeable {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
         validate();
     }

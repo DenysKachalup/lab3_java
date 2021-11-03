@@ -1,11 +1,11 @@
 package Task4;
 
 public class LowMulti {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        SimpleThread1 simpleThread1 = new SimpleThread1();
-        SimpleThread2 simpleThread2 = new SimpleThread2();
-        SimpleThread3 simpleThread3 = new SimpleThread3();
+        final SimpleThread1 simpleThread1 = new SimpleThread1();
+        final SimpleThread2 simpleThread2 = new SimpleThread2();
+        final SimpleThread3 simpleThread3 = new SimpleThread3();
 
         simpleThread1.start();
         simpleThread2.start();

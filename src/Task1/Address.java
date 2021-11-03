@@ -3,7 +3,7 @@ package Task1;
 public class Address {
     String address;
 
-    public Address(String address) {
+    public Address(final String address) {
         this.address = address;
     }
 
@@ -11,7 +11,7 @@ public class Address {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(final String address) {
         this.address = address;
     }
 }

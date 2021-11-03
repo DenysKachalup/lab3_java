@@ -10,7 +10,7 @@ public class User {
     Sex sex;
     Address address;
 
-    public User(String firstName, String surname, int age, Sex sex, Address address) {
+    public User(final String firstName, final String surname, final int age, final Sex sex, final Address address) {
         this.firstName = firstName;
         this.surName = surname;
         this.age = age;
@@ -24,7 +24,7 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(final String firstName) {
         this.firstName = firstName;
         validate();
     }
@@ -33,7 +33,7 @@ public class User {
         return surName;
     }
 
-    public void setSurName(String surName) {
+    public void setSurName(final String surName) {
         this.surName = surName;
         validate();
     }
@@ -42,7 +42,7 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(final int age) {
         this.age = age;
         validate();
     }
@@ -51,7 +51,7 @@ public class User {
         return sex;
     }
 
-    public void setSex(Sex sex) {
+    public void setSex(final Sex sex) {
         this.sex = sex;
     }
 
@@ -59,12 +59,12 @@ public class User {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(final Address address) {
         this.address = address;
     }
 
     public void validate() {
-        List<String> list = new ArrayList<>();
+        final List<String> list = new ArrayList<>();
 
         if(firstName.matches(".*\\d+.*") || firstName.matches(".*\\s+.*")|| !firstName.matches(".+")) {
             list.add("incorrectly firstname");

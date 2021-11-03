@@ -11,7 +11,7 @@ public class StudentSimple {
     public StudentSimple() {
     }
 
-    public StudentSimple(Student students) {
+    public StudentSimple(final Student students) {
         this.name = students.getName();
         this.surName = students.getSurName();
         this.id = students.getId();
@@ -21,7 +21,7 @@ public class StudentSimple {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -29,7 +29,7 @@ public class StudentSimple {
         return surName;
     }
 
-    public void setSurName(String surName) {
+    public void setSurName(final String surName) {
         this.surName = surName;
     }
 
@@ -37,11 +37,11 @@ public class StudentSimple {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(final long id) {
         this.id = id;
     }
 
-    public List<StudentSimple> transformationList(List<Student> students) {
+    public List<StudentSimple> transformationList(final List<Student> students) {
         return students.stream()
                 .map(StudentSimple::new)
                 .collect(Collectors.toList());

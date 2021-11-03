@@ -23,7 +23,7 @@ public class Main {
         students.add(stud2);
         students.add(stud3);
 
-        StudentSimple studentSimples = new StudentSimple();
+        final StudentSimple studentSimples = new StudentSimple();
         studentSimples.transformationList(students);
 
         System.out.println(stud1.averageMark());

@@ -14,10 +14,10 @@ public class Student {
     private List<Subject> subject;
     private List<Mark> marks;
 
-    public Student(String fatherName) {
+    public Student(final String fatherName) {
     }
 
-    public Student(final String name, final String surName, String fatherName) {
+    public Student(final String name, final String surName, final String fatherName) {
         this.name = name;
         this.surName = surName;
         this.fatherName = fatherName;
@@ -25,7 +25,7 @@ public class Student {
         this.id = Student.idStatic++;
     }
 
-    public Student(final String name, final String surName, String fatherName, final List<Subject> subject) {
+    public Student(final String name, final String surName, final String fatherName, final List<Subject> subject) {
         this.name = name;
         this.surName = surName;
         this.fatherName = fatherName;
@@ -82,7 +82,7 @@ public class Student {
         return fatherName;
     }
 
-    public void setFatherName(String fatherName) {
+    public void setFatherName(final String fatherName) {
         this.fatherName = fatherName;
     }
 
@@ -111,7 +111,7 @@ public class Student {
         double tmp = 0;
         int count = 0;
 
-        for (Mark mark : marks) {
+        for (final Mark mark : marks) {
                 tmp += mark.getMark().stream().mapToInt(value -> value).sum();
                 count += mark.getMark().stream().mapToInt(value -> value).count();
             }
