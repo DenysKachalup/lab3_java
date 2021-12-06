@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person implements Closeable {
-    String name;
+    private String name;
 
     public Person(final String name) {
         this.name = name;

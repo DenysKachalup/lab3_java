@@ -14,9 +14,9 @@ public class Main {
         subjects.add(physic);
         subjects.add(math);
 
-        final Student stud1 = new Student("2", "D", "2", subjects);
-        final Student stud2 = new Student("1", "D", "4", subjects);
-        final Student stud3 = new Student("3", "D", "3", subjects);
+        final Student stud1 = new Student("Yura", "Kachalup", "2", subjects);
+        final Student stud2 = new Student("Vlad", "Tyhocky", "4", subjects);
+        final Student stud3 = new Student("Denys", "Kachalup", "3", subjects);
 
         final List<Student> students = new ArrayList<>();
         students.add(stud1);
@@ -51,7 +51,7 @@ public class Main {
         students.get(0).addMark(12, "IT");
         students.get(1).addMark(2, "IT");
         students.get(2).addMark(3, "IT");
-        System.out.println(group.printSurnameHyphen());
+        System.out.println(group);
 
     }
 }

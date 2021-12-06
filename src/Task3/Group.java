@@ -19,16 +19,10 @@ public class Group {
     }
 
     public void addSubject(final List<Subject> subjects, final String name) {
-        final Subject subject = new Subject(name);
-        subjects.add(subject);
+        subjects.add(new Subject(name));
 
-        final List<Mark> mark = new ArrayList<>(students.size());
-        for (int i = 0; i < students.size(); i++) {
-            final Mark mark1 = new Mark();
-            mark.add(mark1);
-        }
-        for (int i = 0; i < students.size(); i++) {
-            students.get(i).getMarks().add(mark.get(i));
+        for (final Student student : students) {
+            student.getMarks().add(new Mark());
         }
     }
 
